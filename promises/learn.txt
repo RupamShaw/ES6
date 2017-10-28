@@ -1,0 +1,33 @@
+https://www.youtube.com/watch?v=104J7_HyaG4 How to Use Javascript Promises
+https://www.youtube.com/watch?v=XJEHuBZQ5dU JavaScript ES6 / ES2015 - [10] Promises
+
+Promises represent alternative system for managing async request in codebase by callbacks.
+
+The promise constructor takes one argument, a callback with two parameters, resolve and reject.
+ Do something within the callback, perhaps async, then call resolve if everything worked, otherwise call reject. 
+ Like throw in plain old JavaScript, it's customary, but not required, to reject with an Error object.
+
+var myPromise = new Promise(function(resolve, reject){
+  setTimeout(() => resolve(4), 2000);
+});
+myPromise.then((res) => {res +=3;
+  console.log(res);
+});
+Promise is design pattern
+Promise libraries are q,bluebird
+
+Deffered Object and Promise Object
+Deffered object have property promise and promise itself have 2 property promiseStatus and value by default status is pending 
+and PromiseValue default undefined
+
+deffered have 2 functions resolve and reject
+promise have 2 functions then and catch
+=======
+create defeered object -------
+========
+var deferred = Promise.defer()
+Promise.all(p1,p2,p3)
+ chain Promise
+ by Promise.
+
+3 different task are in progress and then sum up
