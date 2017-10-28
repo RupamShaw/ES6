@@ -90,4 +90,13 @@ let cleanTheRoom = function() {
   Promise.all([ cleanTheRoom(),removedTheGarbage(), getIcecream()]).then(function(done){
       console.log('Everythings done..'+ done);
   }); 
+  ///async await https://www.youtube.com/watch?v=568g8hxJJp4  async / await in JavaScript - What, Why and How - Fun Fun Function
+async function fetchavtUrl(userId) {
+  const response = await fetch(`https://catappapi.herokuapp.com/users/${userId}`)
+  const data = await response.json()
+  console.log('hi',data)
+  return data
+}
 
+const result = fetchavtUrl(123)
+console.log(result)
